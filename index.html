@@ -1,0 +1,3297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="邓莉婷的个人简历网站，求职方向为 AI 产品经理与产品运营。"
+  />
+
+  <title>邓莉婷｜AI 产品经理 / 产品运营</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* =========================
+       01. 全局变量
+    ========================== */
+
+    :root {
+      --bg: #f7f5ff;
+      --bg-deep: #eceaff;
+      --ink: #202238;
+      --ink-soft: #62657b;
+      --ink-light: #85889d;
+
+      --purple: #7657c8;
+      --purple-dark: #4f3b91;
+      --pink: #ff91b8;
+      --blue: #76b5ff;
+      --cyan: #8ee9e0;
+      --yellow: #ffd986;
+      --white: #ffffff;
+
+      --line: rgba(60, 56, 105, 0.12);
+      --glass: rgba(255, 255, 255, 0.54);
+      --glass-strong: rgba(255, 255, 255, 0.72);
+
+      --shadow:
+        0 25px 70px rgba(86, 72, 154, 0.12),
+        0 8px 25px rgba(61, 49, 121, 0.06);
+
+      --radius-large: 34px;
+      --radius-medium: 24px;
+      --radius-small: 16px;
+
+      --content-width: 1180px;
+      --header-height: 78px;
+
+      --sans:
+        "DM Sans",
+        "PingFang SC",
+        "Hiragino Sans GB",
+        "Microsoft YaHei",
+        sans-serif;
+
+      --display:
+        "Libre Caslon Display",
+        "Songti SC",
+        "STSong",
+        serif;
+
+      --transition: 240ms ease;
+    }
+
+    /* =========================
+       02. 基础样式
+    ========================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 22px);
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(
+          circle at 10% 5%,
+          rgba(255, 145, 184, 0.23),
+          transparent 28rem
+        ),
+        radial-gradient(
+          circle at 90% 12%,
+          rgba(118, 181, 255, 0.27),
+          transparent 34rem
+        ),
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(142, 233, 224, 0.16),
+          transparent 38rem
+        ),
+        linear-gradient(180deg, #faf9ff 0%, #f0efff 55%, #f9f6ff 100%);
+      font-family: var(--sans);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.28;
+      content: "";
+      background-image:
+        radial-gradient(
+          circle at center,
+          rgba(55, 48, 98, 0.18) 0.55px,
+          transparent 0.75px
+        );
+      background-size: 7px 7px;
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 70%
+      );
+    }
+
+    ::selection {
+      color: var(--white);
+      background: var(--purple);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    select {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    ul {
+      margin-top: 0;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--content-width));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      margin-bottom: 58px;
+      gap: 64px;
+      align-items: end;
+    }
+
+    .section-kicker {
+      margin-bottom: 15px;
+      color: var(--purple);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-bottom: 0;
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 5vw, 5.5rem);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+    }
+
+    html[lang="zh-CN"] .section-title,
+    html[lang="zh-TW"] .section-title {
+      font-family: var(--sans);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
+    .glass-card {
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      background: var(--glass);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    /* =========================
+       03. 背景色彩弥散
+    ========================== */
+
+    .color-orb {
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(25px);
+      animation: drift 10s ease-in-out infinite alternate;
+    }
+
+    .orb-pink {
+      width: 330px;
+      height: 330px;
+      background: rgba(255, 145, 184, 0.26);
+    }
+
+    .orb-blue {
+      width: 390px;
+      height: 390px;
+      background: rgba(118, 181, 255, 0.24);
+      animation-delay: -3s;
+    }
+
+    .orb-cyan {
+      width: 290px;
+      height: 290px;
+      background: rgba(142, 233, 224, 0.22);
+      animation-delay: -6s;
+    }
+
+    .orb-yellow {
+      width: 260px;
+      height: 260px;
+      background: rgba(255, 217, 134, 0.23);
+      animation-delay: -4s;
+    }
+
+    @keyframes drift {
+      from {
+        transform: translate3d(-15px, -12px, 0) scale(0.95);
+      }
+
+      to {
+        transform: translate3d(24px, 22px, 0) scale(1.07);
+      }
+    }
+
+    /* =========================
+       04. 导航
+    ========================== */
+
+    .site-header {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: var(--header-height);
+      transition:
+        background var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .site-header.is-scrolled {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      background: rgba(247, 245, 255, 0.72);
+      box-shadow: 0 10px 35px rgba(65, 52, 130, 0.06);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      height: 100%;
+      gap: 25px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex: 0 0 auto;
+      gap: 11px;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 14px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--purple),
+          var(--pink)
+        );
+      box-shadow:
+        0 10px 25px rgba(118, 87, 200, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.45);
+    }
+
+    .nav-area {
+      display: flex;
+      gap: 21px;
+      align-items: center;
+    }
+
+    .nav-list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 7px 0;
+      color: var(--ink-soft);
+      font-size: 0.78rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: color var(--transition);
+    }
+
+    .nav-link::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        var(--purple),
+        var(--pink)
+      );
+      content: "";
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--purple-dark);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    .language-select {
+      min-width: 111px;
+      padding: 9px 30px 9px 13px;
+      color: var(--ink);
+      border: 1px solid rgba(91, 75, 164, 0.17);
+      border-radius: 999px;
+      outline: none;
+      background:
+        linear-gradient(45deg, transparent 50%, var(--purple) 50%)
+          calc(100% - 15px) calc(50% - 2px) / 5px 5px no-repeat,
+        linear-gradient(135deg, var(--purple) 50%, transparent 50%)
+          calc(100% - 10px) calc(50% - 2px) / 5px 5px no-repeat,
+        rgba(255, 255, 255, 0.58);
+      font-size: 0.72rem;
+      font-weight: 600;
+      appearance: none;
+      cursor: pointer;
+      backdrop-filter: blur(12px);
+    }
+
+    .language-select:focus-visible {
+      outline: 2px solid var(--purple);
+      outline-offset: 3px;
+    }
+
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid rgba(91, 75, 164, 0.14);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.56);
+      cursor: pointer;
+    }
+
+    .menu-button span {
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      margin: 5px auto;
+      border-radius: 99px;
+      background: var(--ink);
+      transition:
+        transform var(--transition),
+        opacity var(--transition);
+    }
+
+    .menu-button.is-active span:first-child {
+      transform: translateY(3.25px) rotate(45deg);
+    }
+
+    .menu-button.is-active span:last-child {
+      transform: translateY(-3.25px) rotate(-45deg);
+    }
+
+    /* =========================
+       05. 首屏
+    ========================== */
+
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: 100svh;
+      overflow: hidden;
+      align-items: center;
+      padding: calc(var(--header-height) + 65px) 0 80px;
+    }
+
+    .hero .orb-pink {
+      top: 4%;
+      left: -110px;
+    }
+
+    .hero .orb-blue {
+      top: 7%;
+      right: -90px;
+    }
+
+    .hero .orb-cyan {
+      right: 30%;
+      bottom: -80px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(295px, 0.65fr);
+      gap: clamp(50px, 8vw, 110px);
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      margin-bottom: 23px;
+      padding: 8px 14px;
+      gap: 8px;
+      align-items: center;
+      color: var(--purple-dark);
+      border: 1px solid rgba(118, 87, 200, 0.15);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.52);
+      box-shadow: 0 8px 25px rgba(91, 75, 164, 0.07);
+      font-size: 0.77rem;
+      font-weight: 600;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-title {
+      max-width: 850px;
+      margin-bottom: 27px;
+      font-family: var(--display);
+      font-size: clamp(4.4rem, 8.2vw, 8.2rem);
+      font-weight: 400;
+      letter-spacing: -0.065em;
+      line-height: 0.86;
+    }
+
+    html[lang="zh-CN"] .hero-title,
+    html[lang="zh-TW"] .hero-title {
+      font-family: var(--sans);
+      font-size: clamp(3.3rem, 7vw, 6.8rem);
+      font-weight: 600;
+      line-height: 1.02;
+    }
+
+    .hero-accent {
+      display: block;
+      margin-top: 15px;
+      color: transparent;
+      background:
+        linear-gradient(
+          90deg,
+          #6751b6 0%,
+          #b55d9e 46%,
+          #437fba 100%
+        );
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .hero-description {
+      max-width: 690px;
+      margin-bottom: 35px;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 1.35vw, 1.12rem);
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      padding: 11px 21px;
+      gap: 9px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(91, 75, 164, 0.18);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      color: var(--white);
+      border-color: transparent;
+      background:
+        linear-gradient(
+          120deg,
+          var(--purple),
+          #9c62cc 55%,
+          #d66eab
+        );
+      box-shadow: 0 15px 35px rgba(118, 87, 200, 0.25);
+    }
+
+    .button-primary:hover {
+      box-shadow: 0 20px 42px rgba(118, 87, 200, 0.34);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.56);
+      backdrop-filter: blur(13px);
+    }
+
+    /* 简历下载按钮 */
+    .button-download {
+      position: relative;
+      color: var(--purple-dark);
+      border-color: rgba(118, 87, 200, 0.28);
+      background:
+        linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(238, 232, 255, 0.78)
+        );
+      box-shadow: 0 12px 28px rgba(118, 87, 200, 0.14);
+      backdrop-filter: blur(13px);
+    }
+
+    .button-download:hover {
+      border-color: rgba(118, 87, 200, 0.45);
+      box-shadow: 0 18px 38px rgba(118, 87, 200, 0.22);
+    }
+
+    .button-download .download-icon {
+      display: inline-flex;
+      align-items: center;
+      transition: transform var(--transition);
+    }
+
+    .button-download:hover .download-icon {
+      transform: translateY(2px);
+    }
+
+    .button-download .download-meta {
+      padding-left: 9px;
+      margin-left: 2px;
+      border-left: 1px solid rgba(118, 87, 200, 0.2);
+      color: var(--ink-light);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* 导航栏中的紧凑下载按钮 */
+    .nav-download {
+      flex: 0 0 auto;
+      min-height: 38px;
+      padding: 6px 15px;
+      gap: 7px;
+      font-size: 0.72rem;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 30px;
+      border-radius: var(--radius-large);
+      transform: rotate(1.5deg);
+    }
+
+    .hero-card::before {
+      position: absolute;
+      top: -90px;
+      right: -80px;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: rgba(255, 145, 184, 0.22);
+      content: "";
+      filter: blur(5px);
+    }
+
+    .hero-card::after {
+      position: absolute;
+      right: 30px;
+      bottom: 26px;
+      color: rgba(118, 87, 200, 0.24);
+      content: "✦";
+      font-size: 2rem;
+    }
+
+    .card-label {
+      position: relative;
+      margin-bottom: 25px;
+      color: var(--purple);
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .hero-facts {
+      position: relative;
+      display: grid;
+      margin: 0;
+    }
+
+    .hero-fact {
+      padding: 17px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .hero-fact:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .hero-fact dt {
+      margin-bottom: 5px;
+      color: var(--ink-light);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .hero-fact dd {
+      margin: 0;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .floating-symbol {
+      position: absolute;
+      z-index: 1;
+      color: rgba(118, 87, 200, 0.26);
+      pointer-events: none;
+      animation: floatSymbol 5s ease-in-out infinite;
+    }
+
+    .symbol-one {
+      top: 19%;
+      left: 4%;
+      font-size: 2.5rem;
+    }
+
+    .symbol-two {
+      right: 6%;
+      bottom: 14%;
+      font-size: 3rem;
+      animation-delay: -2s;
+    }
+
+    @keyframes floatSymbol {
+      0%,
+      100% {
+        transform: translateY(0) rotate(0);
+      }
+
+      50% {
+        transform: translateY(-16px) rotate(8deg);
+      }
+    }
+
+    /* =========================
+       06. 关于我
+    ========================== */
+
+    .about-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(35px, 7vw, 80px);
+      border-radius: var(--radius-large);
+    }
+
+    .about-card::after {
+      position: absolute;
+      right: -110px;
+      bottom: -120px;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(118, 181, 255, 0.25),
+          transparent 67%
+        );
+      content: "";
+    }
+
+    .about-layout {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 0.45fr 1.55fr;
+      gap: 54px;
+    }
+
+    .about-emoji {
+      font-size: clamp(4.5rem, 8vw, 7.5rem);
+      line-height: 1;
+      filter: drop-shadow(0 16px 25px rgba(118, 87, 200, 0.15));
+    }
+
+    .about-lead {
+      margin-bottom: 27px;
+      font-size: clamp(1.6rem, 3vw, 2.75rem);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+      line-height: 1.5;
+    }
+
+    .about-description {
+      margin-bottom: 0;
+      color: var(--ink-soft);
+    }
+
+    .availability {
+      display: inline-flex;
+      margin-top: 28px;
+      padding: 13px 16px;
+      gap: 9px;
+      align-items: flex-start;
+      color: var(--purple-dark);
+      border: 1px solid rgba(118, 87, 200, 0.13);
+      border-radius: 14px;
+      background: rgba(238, 232, 255, 0.6);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       07. 经历卡片
+    ========================== */
+
+    .experience-section {
+      overflow: hidden;
+    }
+
+    .experience-section .orb-blue {
+      top: 28%;
+      right: -190px;
+    }
+
+    .experience-section .orb-yellow {
+      bottom: 8%;
+      left: -140px;
+    }
+
+    .experience-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .experience-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 185px minmax(0, 1fr);
+      padding: 35px;
+      gap: 36px;
+      border-radius: var(--radius-medium);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .experience-card:hover {
+      box-shadow:
+        0 32px 75px rgba(86, 72, 154, 0.17),
+        0 10px 28px rgba(61, 49, 121, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .experience-meta {
+      padding-right: 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .experience-date {
+      margin-bottom: 12px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .experience-type {
+      display: inline-flex;
+      padding: 5px 10px;
+      color: var(--ink-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.46);
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+
+    .experience-role {
+      margin-bottom: 7px;
+      font-size: clamp(1.35rem, 2.5vw, 2rem);
+      letter-spacing: -0.025em;
+      line-height: 1.35;
+    }
+
+    .experience-company {
+      margin-bottom: 22px;
+      color: var(--purple);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .detail-list {
+      margin: 0;
+      padding: 0;
+      color: var(--ink-soft);
+      list-style: none;
+    }
+
+    .detail-list li {
+      position: relative;
+      margin-bottom: 13px;
+      padding-left: 23px;
+    }
+
+    .detail-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-list li::before {
+      position: absolute;
+      top: 0.55em;
+      left: 0;
+      content: "✦";
+      color: var(--pink);
+      font-size: 0.72rem;
+    }
+
+    /* =========================
+       08. 项目
+    ========================== */
+
+    .project-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      overflow: hidden;
+      border-radius: var(--radius-large);
+    }
+
+    .project-content {
+      padding: clamp(34px, 6vw, 68px);
+    }
+
+    .project-date {
+      margin-bottom: 17px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .project-title {
+      margin-bottom: 10px;
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      letter-spacing: -0.045em;
+      line-height: 1.15;
+    }
+
+    .project-type {
+      margin-bottom: 30px;
+      color: var(--ink-light);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 31px;
+      gap: 10px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      padding: 9px 14px;
+      gap: 7px;
+      align-items: center;
+      border: 1px solid rgba(118, 87, 200, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--purple-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .project-link:hover {
+      background: rgba(238, 232, 255, 0.9);
+      transform: translateY(-2px);
+    }
+
+    .project-visual {
+      position: relative;
+      display: grid;
+      min-height: 490px;
+      overflow: hidden;
+      place-items: center;
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255, 255, 255, 0.73),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 80% 70%,
+          rgba(255, 217, 134, 0.42),
+          transparent 38%
+        ),
+        linear-gradient(
+          145deg,
+          #b9a8f7,
+          #f2aad1 48%,
+          #9ddfeb
+        );
+    }
+
+    .project-visual::before,
+    .project-visual::after {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.72);
+      content: "✦";
+      font-size: 2.3rem;
+    }
+
+    .project-visual::before {
+      top: 12%;
+      left: 14%;
+    }
+
+    .project-visual::after {
+      right: 12%;
+      bottom: 13%;
+    }
+
+    .phone-mockup {
+      position: relative;
+      width: min(235px, 70%);
+      aspect-ratio: 0.66;
+      padding: 24px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      border-radius: 31px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow:
+        0 28px 60px rgba(81, 61, 133, 0.23),
+        inset 0 1px 1px rgba(255, 255, 255, 0.85);
+      transform: rotate(4deg);
+      backdrop-filter: blur(18px);
+    }
+
+    .phone-bar {
+      width: 42%;
+      height: 6px;
+      margin: 0 auto 33px;
+      border-radius: 999px;
+      background: rgba(54, 49, 88, 0.16);
+    }
+
+    .phone-word {
+      margin-bottom: 10px;
+      color: var(--purple-dark);
+      font-family: var(--display);
+      font-size: 2.1rem;
+    }
+
+    .phone-line {
+      height: 7px;
+      margin-top: 12px;
+      border-radius: 999px;
+      background: rgba(69, 61, 112, 0.1);
+    }
+
+    .phone-line.short {
+      width: 65%;
+    }
+
+    .phone-ai {
+      display: grid;
+      width: 74px;
+      height: 74px;
+      margin-top: 36px;
+      place-items: center;
+      color: var(--purple-dark);
+      border: 1px solid rgba(118, 87, 200, 0.18);
+      border-radius: 25px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(185, 168, 247, 0.5),
+          rgba(242, 170, 209, 0.45)
+        );
+      font-weight: 700;
+    }
+
+    /* =========================
+       09. 志愿者
+    ========================== */
+
+    .volunteer-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(34px, 6vw, 65px);
+      border-radius: var(--radius-large);
+    }
+
+    .volunteer-card::before {
+      position: absolute;
+      top: -120px;
+      right: -100px;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(142, 233, 224, 0.35),
+          transparent 68%
+        );
+      content: "";
+    }
+
+    .volunteer-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 0.62fr 1.38fr;
+      gap: 55px;
+    }
+
+    .volunteer-date {
+      margin-bottom: 16px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .volunteer-emoji {
+      font-size: 4.5rem;
+    }
+
+    .volunteer-title {
+      margin-bottom: 8px;
+      font-size: clamp(1.7rem, 3.3vw, 3rem);
+      letter-spacing: -0.04em;
+      line-height: 1.25;
+    }
+
+    .volunteer-role {
+      margin-bottom: 26px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    /* =========================
+       10. 教育
+    ========================== */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .education-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 365px;
+      padding: 38px;
+      border-radius: var(--radius-medium);
+      transition: transform var(--transition);
+    }
+
+    .education-card:hover {
+      transform: translateY(-5px) rotate(-0.5deg);
+    }
+
+    .education-card::after {
+      position: absolute;
+      right: -50px;
+      bottom: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(118, 181, 255, 0.14);
+      content: "";
+    }
+
+    .education-card:nth-child(2)::after {
+      background: rgba(255, 145, 184, 0.15);
+    }
+
+    .education-emoji {
+      margin-bottom: 31px;
+      font-size: 2.4rem;
+    }
+
+    .education-date {
+      margin-bottom: 14px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .education-school {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+      font-size: clamp(1.6rem, 3vw, 2.45rem);
+      letter-spacing: -0.035em;
+      line-height: 1.3;
+    }
+
+    .education-major {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .education-description {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+    }
+
+    /* =========================
+       11. 技能与荣誉
+    ========================== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+    }
+
+    .panel {
+      padding: clamp(31px, 5vw, 50px);
+      border-radius: var(--radius-large);
+    }
+
+    .panel-label {
+      margin-bottom: 29px;
+      color: var(--purple);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .honor-date {
+      margin-bottom: 12px;
+      color: var(--ink-light);
+      font-weight: 600;
+    }
+
+    .honor-title {
+      margin-bottom: 9px;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      letter-spacing: -0.03em;
+      line-height: 1.4;
+    }
+
+    .honor-result {
+      display: inline-block;
+      margin-bottom: 22px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .honor-description {
+      margin-bottom: 0;
+      color: var(--ink-soft);
+    }
+
+    .skill-groups {
+      display: grid;
+      gap: 26px;
+    }
+
+    .skill-group {
+      display: grid;
+      grid-template-columns: 82px minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .skill-title {
+      padding-top: 6px;
+      font-weight: 700;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      padding: 7px 12px;
+      color: var(--ink-soft);
+      border: 1px solid rgba(118, 87, 200, 0.13);
+      border-radius: 999px;
+      background:
+        linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.55),
+          rgba(239, 234, 255, 0.6)
+        );
+      font-size: 0.77rem;
+    }
+
+    /* =========================
+       12. 联系方式
+    ========================== */
+
+    .contact {
+      position: relative;
+      overflow: hidden;
+      padding: 110px 0 55px;
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(255, 145, 184, 0.42),
+          transparent 28rem
+        ),
+        radial-gradient(
+          circle at 85% 70%,
+          rgba(118, 181, 255, 0.36),
+          transparent 35rem
+        ),
+        linear-gradient(
+          135deg,
+          #37315f,
+          #50437f 50%,
+          #3a5076
+        );
+    }
+
+    .contact::before {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      content: "";
+      background:
+        radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.32) 1px,
+          transparent 1.5px
+        );
+      background-size: 55px 55px;
+      opacity: 0.28;
+    }
+
+    .contact-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-kicker {
+      margin-bottom: 17px;
+      color: #d9d1ff;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .contact-title {
+      max-width: 880px;
+      margin-bottom: 22px;
+      font-family: var(--display);
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      font-weight: 400;
+      letter-spacing: -0.06em;
+      line-height: 0.88;
+    }
+
+    html[lang="zh-CN"] .contact-title,
+    html[lang="zh-TW"] .contact-title {
+      font-family: var(--sans);
+      font-size: clamp(2.7rem, 6.5vw, 5.8rem);
+      font-weight: 600;
+      line-height: 1.12;
+    }
+
+    .contact-description {
+      max-width: 630px;
+      margin-bottom: 51px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* 联系区下载卡片 */
+    .contact-download {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      padding: clamp(24px, 4vw, 34px);
+      gap: 22px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-medium);
+      background: rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .contact-download-text {
+      min-width: 240px;
+      flex: 1 1 320px;
+    }
+
+    .contact-download-title {
+      margin-bottom: 8px;
+      font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+    }
+
+    .contact-download-note {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    .contact-download-action {
+      flex: 0 0 auto;
+    }
+
+    .button-download-light {
+      color: #2b2450;
+      border-color: transparent;
+      background: var(--white);
+      box-shadow: 0 16px 34px rgba(20, 15, 45, 0.28);
+    }
+
+    .button-download-light:hover {
+      box-shadow: 0 22px 46px rgba(20, 15, 45, 0.36);
+    }
+
+    .button-download-light .download-meta {
+      border-left-color: rgba(43, 36, 80, 0.18);
+      color: rgba(43, 36, 80, 0.55);
+    }
+
+    .contact-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 80px;
+      gap: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      min-width: 0;
+      padding: 24px;
+      gap: 17px;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.13);
+      transform: translateY(-4px);
+    }
+
+    .contact-icon {
+      display: grid;
+      flex: 0 0 auto;
+      width: 47px;
+      height: 47px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.09);
+      font-size: 1.1rem;
+    }
+
+    .contact-meta {
+      min-width: 0;
+    }
+
+    .contact-label {
+      display: block;
+      margin-bottom: 3px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      display: block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .footer {
+      display: flex;
+      padding-top: 27px;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.54);
+      font-size: 0.75rem;
+    }
+
+    .back-top {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    /* =========================
+       13. 入场动画
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       14. 响应式
+    ========================== */
+
+    @media (max-width: 1060px) {
+      :root {
+        --header-height: 70px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-area {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        display: flex;
+        max-height: 0;
+        padding: 0 24px;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: stretch;
+        border-bottom: 1px solid transparent;
+        background: rgba(247, 245, 255, 0.96);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          max-height 350ms ease,
+          padding 350ms ease,
+          opacity 220ms ease,
+          visibility 220ms ease;
+        backdrop-filter: blur(22px);
+      }
+
+      .nav-area.is-open {
+        max-height: calc(100vh - var(--header-height));
+        padding-top: 18px;
+        padding-bottom: 28px;
+        border-bottom-color: rgba(118, 87, 200, 0.12);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.94rem;
+      }
+
+      .nav-link::after {
+        display: none;
+      }
+
+      .language-select {
+        width: 100%;
+        min-height: 44px;
+      }
+
+      .nav-download {
+        width: 100%;
+        min-height: 46px;
+        margin-top: 4px;
+        font-size: 0.86rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 720px;
+        transform: none;
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(calc(100% - 32px), var(--content-width));
+      }
+
+      .section {
+        padding: 78px 0;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + 70px);
+      }
+
+      .hero-title {
+        font-size: clamp(3.45rem, 18vw, 5.8rem);
+      }
+
+      html[lang="zh-CN"] .hero-title,
+      html[lang="zh-TW"] .hero-title {
+        font-size: clamp(2.8rem, 13vw, 4.7rem);
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .about-emoji {
+        font-size: 4rem;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+        padding: 27px 23px;
+        gap: 24px;
+      }
+
+      .experience-meta {
+        padding-right: 0;
+        padding-bottom: 21px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-visual {
+        min-height: 390px;
+      }
+
+      .volunteer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-card {
+        min-height: auto;
+        padding: 29px 24px;
+      }
+
+      .skill-group {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .contact-download {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+      }
+
+      .contact-download-action .button {
+        width: 100%;
+      }
+
+      .contact-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        gap: 18px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航 -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark">D</span>
+        <span data-i18n="name">邓莉婷</span>
+      </a>
+
+      <div class="nav-area" id="navArea">
+        <nav aria-label="主要导航">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="#about" data-i18n="navAbout">
+                关于我
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#experience" data-i18n="navExperience">
+                经历
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#project" data-i18n="navProject">
+                项目
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#volunteer" data-i18n="navVolunteer">
+                志愿经历
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#education" data-i18n="navEducation">
+                教育
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#skills" data-i18n="navSkills">
+                技能
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#contact" data-i18n="navContact">
+                联系
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <select
+          class="language-select"
+          id="languageSelect"
+          aria-label="切换语言"
+        >
+          <option value="zh-CN">简体中文</option>
+          <option value="zh-TW">繁體中文</option>
+          <option value="en-US">English</option>
+        </select>
+
+        <a
+          class="button button-download nav-download"
+          id="navDownload"
+          href="resume/Liting-Deng-AI-PM-Resume-ZH.pdf"
+          download="AI产品经理-邓莉婷-港理工-硕士.pdf"
+        >
+          <span class="download-icon" aria-hidden="true">⤓</span>
+          <span data-i18n="downloadResume">下载 PDF 简历</span>
+        </a>
+      </div>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="打开导航菜单"
+        aria-expanded="false"
+        aria-controls="navArea"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首屏 -->
+    <section class="hero" id="home">
+      <span class="color-orb orb-pink"></span>
+      <span class="color-orb orb-blue"></span>
+      <span class="color-orb orb-cyan"></span>
+
+      <span class="floating-symbol symbol-one">✦</span>
+      <span class="floating-symbol symbol-two">☁︎</span>
+
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="hero-eyebrow">
+            <span>👋</span>
+            <span data-i18n="heroEyebrow">
+              你好，很高兴认识你
+            </span>
+          </p>
+
+          <h1 class="hero-title">
+            <span data-i18n="heroName">我是邓莉婷，</span>
+
+            <span class="hero-accent" data-i18n="heroRole">
+              探索 AI 产品与增长。
+            </span>
+          </h1>
+
+          <p class="hero-description" data-i18n="heroDescription">
+            香港理工大学翻译与语言技术在读，聚焦 AI
+            产品、AI 增长与国际化产品运营。
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">
+              <span data-i18n="viewExperience">看看我的经历</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="mailto:IamDorisDeng@outlook.com"
+            >
+              <span>💌</span>
+              <span data-i18n="contactMe">联系我</span>
+            </a>
+
+            <a
+              class="button button-download"
+              id="heroDownload"
+              href="resume/Liting-Deng-AI-PM-Resume-ZH.pdf"
+              download="AI产品经理-邓莉婷-港理工-硕士.pdf"
+            >
+              <span class="download-icon" aria-hidden="true">⤓</span>
+              <span data-i18n="downloadResume">下载 PDF 简历</span>
+              <span class="download-meta">PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card glass-card reveal">
+          <p class="card-label" data-i18n="snapshot">
+            Profile snapshot
+          </p>
+
+          <dl class="hero-facts">
+            <div class="hero-fact">
+              <dt data-i18n="targetLabel">求职意向</dt>
+              <dd data-i18n="targetValue">
+                AI 产品经理 / 产品运营
+              </dd>
+            </div>
+
+            <div class="hero-fact">
+              <dt data-i18n="focusLabel">聚焦方向</dt>
+              <dd data-i18n="focusValue">
+                AI 产品、AI 增长、国际化产品运营
+              </dd>
+            </div>
+
+            <div class="hero-fact">
+              <dt data-i18n="availabilityLabel">实习时间</dt>
+              <dd data-i18n="availabilityShort">
+                2026 年 12 月中旬起
+              </dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-card glass-card reveal">
+          <div class="about-layout">
+            <div class="about-emoji" aria-hidden="true">🫧</div>
+
+            <div>
+              <p class="section-kicker" data-i18n="aboutKicker">
+                About me
+              </p>
+
+              <h2 class="about-lead" data-i18n="aboutLead">
+                从用户场景出发，把业务问题转化为产品方案、Prompt
+                规则、AI 评测指标与可执行流程。
+              </h2>
+
+              <p class="about-description" data-i18n="aboutBody">
+                具备 GEO（生成式引擎优化）内容增长、跨境电商平台运营与
+                AI 产品 Demo 经验。
+              </p>
+
+              <div class="availability">
+                <span>✨</span>
+                <span data-i18n="availabilityFull">
+                  2026 年 12 月中旬起，每周 5 天，可持续 4–6
+                  个月实习。
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 实习与兼职经历 -->
+    <section class="section experience-section" id="experience">
+      <span class="color-orb orb-blue"></span>
+      <span class="color-orb orb-yellow"></span>
+
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="experienceKicker">
+              Experience
+            </p>
+
+            <h2 class="section-title" data-i18n="experienceTitle">
+              实习与兼职经历
+            </h2>
+          </div>
+
+          <p class="section-intro" data-i18n="experienceIntro">
+            横跨 AI 搜索增长、跨境电商、英语直播营销与品牌推广的实践经历。
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <!-- 蓝色脉动 -->
+          <article class="experience-card glass-card reveal">
+            <div class="experience-meta">
+              <p class="experience-date">2026.8—2026.9</p>
+              <span class="experience-type" data-i18n="internship">
+                实习
+              </span>
+            </div>
+
+            <div>
+              <h3 class="experience-role" data-i18n="exp1Role">
+                GEO 运营
+              </h3>
+
+              <p class="experience-company" data-i18n="exp1Company">
+                蓝色脉动
+              </p>
+
+              <ul class="detail-list">
+                <li data-i18n="exp1Bullet1">
+                  负责 AI 视频产品的 Reddit GEO
+                  增长运营，提升品牌在目标 AI
+                  回答中的提及率与内容引用率。
+                </li>
+
+                <li data-i18n="exp1Bullet2">
+                  监控 Citation Rate、Brand Mentioned 与 Traffic
+                  等核心指标，每周更新与汇报数据，并按 URL
+                  核验引用状态。
+                </li>
+
+                <li data-i18n="exp1Bullet3">
+                  累计发布评论约 190 条、帖子 20 篇；Citation Rate
+                  提升约 4 个百分点。
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 晓为供应链 -->
+          <article class="experience-card glass-card reveal">
+            <div class="experience-meta">
+              <p class="experience-date">2025.9—2026.1</p>
+              <span class="experience-type" data-i18n="internship">
+                实习
+              </span>
+            </div>
+
+            <div>
+              <h3 class="experience-role" data-i18n="exp2Role">
+                产品运营助理（亚马逊 & Wayfair）
+              </h3>
+
+              <p class="experience-company" data-i18n="exp2Company">
+                深圳市晓为供应链
+              </p>
+
+              <ul class="detail-list">
+                <li data-i18n="exp2Bullet1">
+                  负责 Amazon 与 Wayfair
+                  家具商品运营，覆盖 Listing、定价、库存、广告促销等环节；累计上架
+                  150+ 个 SKU。
+                </li>
+
+                <li data-i18n="exp2Bullet2">
+                  根据库存、库龄、销量与上架状态识别异常
+                  SKU，参与优惠券、SEO、价格及广告策略调整。
+                </li>
+
+                <li data-i18n="exp2Bullet3">
+                  跟进并修复上架异常，负责商品均完成上线，未出现
+                  SKU 错配或错品。
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 皇腾商务 -->
+          <article class="experience-card glass-card reveal">
+            <div class="experience-meta">
+              <p class="experience-date">2025.7—2025.8</p>
+              <span class="experience-type" data-i18n="partTime">
+                兼职
+              </span>
+            </div>
+
+            <div>
+              <h3 class="experience-role" data-i18n="exp3Role">
+                海外带货主播
+              </h3>
+
+              <p class="experience-company" data-i18n="exp3Company">
+                皇腾商务
+              </p>
+
+              <ul class="detail-list">
+                <li data-i18n="exp3Bullet1">
+                  日均 3 小时、2 场英语直播，结合美国本土场景拆解产品适配性；借助平台工具监测互动与停留数据，动态调控场策略并促成订单。
+                </li>
+
+                <li data-i18n="exp3Bullet2">
+                  使用平台包邮、美元满减工具，并通过 A/B
+                  测试优化优惠；建立用户反馈数字化表，同步数据至选品与库存，形成业务闭环。
+                </li>
+
+                <li data-i18n="exp3Bullet3">
+                  单日最高 GMV 600 美元、成交 78
+                  单；触达美国精准买家超 1000 人，累计涨粉 1200+，回头客占比
+                  22%；咨询转化率提升 80%，美国本土订单纠纷率不高于 3%。
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 家具行业协会 -->
+          <article class="experience-card glass-card reveal">
+            <div class="experience-meta">
+              <p class="experience-date">2023.5—2023.6</p>
+              <span class="experience-type" data-i18n="internship">
+                实习
+              </span>
+            </div>
+
+            <div>
+              <h3 class="experience-role" data-i18n="exp4Role">
+                品牌宣传推广
+              </h3>
+
+              <p class="experience-company" data-i18n="exp4Company">
+                深圳市家具行业协会
+              </p>
+
+              <ul class="detail-list">
+                <li data-i18n="exp4Bullet1">
+                  建立动态筛选机制，从超过 1000
+                  名国际采购商中精准识别并沉淀 200+
+                  高意向潜在客户，为后续商务转化提供高质量线索池。
+                </li>
+
+                <li data-i18n="exp4Bullet2">
+                  基于采购品类、预算等维度，对客户需求进行分层记录与分析，形成可追溯的客户画像数据库，提升线索跟进效率。
+                </li>
+
+                <li data-i18n="exp4Bullet3">
+                  快速内化产品优势并形成标准化沟通话术，针对不同客户灵活调整推介策略，最大化品牌吸引力。
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目经历 -->
+    <section class="section" id="project">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="projectKicker">
+              Selected project
+            </p>
+
+            <h2 class="section-title" data-i18n="projectSectionTitle">
+              项目经历
+            </h2>
+          </div>
+
+          <p class="section-intro" data-i18n="projectIntro">
+            从需求定义、PRD、Prompt 迭代到模型调用与移动端体验的完整实践。
+          </p>
+        </div>
+
+        <article class="project-card glass-card reveal">
+          <div class="project-content">
+            <p class="project-date">2026.6—2026.7</p>
+
+            <h3 class="project-title" data-i18n="projectTitle">
+              个性化 AI 词汇学习应用 Recollection
+            </h3>
+
+            <p class="project-type" data-i18n="projectType">
+              个人独立项目
+            </p>
+
+            <ul class="detail-list">
+              <li data-i18n="projectBullet1">
+                针对“能认识单词但不会主动使用”的学习场景，分析用户痛点、竞品缺口，完成
+                PRD 与 MVP 优先级设计。
+              </li>
+
+              <li data-i18n="projectBullet2">
+                设计多维批改与结构化反馈；建立核心、边界、对抗等安全场景评测框架，并设计
+                Bad Case 与 Prompt 迭代机制。
+              </li>
+
+              <li data-i18n="projectBullet3">
+                完成模型调用、异常兜底与本地数据闭环，在数据隐私、调用成本、服务稳定性和移动端体验之间进行产品取舍。
+              </li>
+            </ul>
+
+            <div class="project-links">
+              <a
+                class="project-link"
+                href="https://53494.github.io/recollection-vocab-pwa/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>🚀 Demo</span>
+                <span>↗</span>
+              </a>
+
+              <a
+                class="project-link"
+                href="https://github.com/53494/recollection-vocab-pwa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>💻</span>
+                <span data-i18n="sourceCode">源码</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-visual" aria-hidden="true">
+            <div class="phone-mockup">
+              <div class="phone-bar"></div>
+              <div class="phone-word">recollect</div>
+              <div class="phone-line"></div>
+              <div class="phone-line"></div>
+              <div class="phone-line short"></div>
+              <div class="phone-ai">AI ✦</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 志愿者经历 -->
+    <section class="section" id="volunteer">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="volunteerKicker">
+              Volunteer
+            </p>
+
+            <h2 class="section-title" data-i18n="volunteerSectionTitle">
+              志愿者经历
+            </h2>
+          </div>
+
+          <p class="section-intro" data-i18n="volunteerIntro">
+            在国际绳索救援赛事中承担双语沟通与现场协调工作。
+          </p>
+        </div>
+
+        <article class="volunteer-card glass-card reveal">
+          <div class="volunteer-grid">
+            <div>
+              <p class="volunteer-date">2023.8—2023.9</p>
+              <div class="volunteer-emoji" aria-hidden="true">🧗</div>
+            </div>
+
+            <div>
+              <h3 class="volunteer-title" data-i18n="volunteerTitle">
+                GRIMPDAY ASIA 格瑞德世界绳索救援大赛
+              </h3>
+
+              <p class="volunteer-role" data-i18n="volunteerRole">
+                翻译志愿者
+              </p>
+
+              <ul class="detail-list">
+                <li data-i18n="volunteerBullet1">
+                  赛前：接机，协助比利时队员与主办方核对赛程安排，并确认装备安检流程。
+                </li>
+
+                <li data-i18n="volunteerBullet2">
+                  赛中：精准传递比赛场地地形数据、比赛规则、安全与评分细则等关键信息，协调突发状况并解决分歧。
+                </li>
+
+                <li data-i18n="volunteerBullet3">
+                  赛后：协助活动顺利圆满结束，并完成送机等接待工作。
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 教育 -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="educationKicker">
+              Education
+            </p>
+
+            <h2 class="section-title" data-i18n="educationTitle">
+              教育背景
+            </h2>
+          </div>
+
+          <p class="section-intro" data-i18n="educationIntro">
+            语言技术、NLP 语料处理、跨文化沟通与商业课程相结合的学习背景。
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card glass-card reveal">
+            <div class="education-emoji" aria-hidden="true">🎓</div>
+
+            <p class="education-date">
+              2026.9—2027.7
+              <span data-i18n="studying">（在读）</span>
+            </p>
+
+            <h3 class="education-school" data-i18n="edu1School">
+              香港理工大学
+            </h3>
+
+            <p class="education-major" data-i18n="edu1Major">
+              翻译与语言技术
+            </p>
+
+            <p class="education-description" data-i18n="edu1Description">
+              交叉学科方向：NLP
+              语料处理、人机协同翻译（MTPE）、AIGC 语言应用落地。
+            </p>
+          </article>
+
+          <article class="education-card glass-card reveal">
+            <div class="education-emoji" aria-hidden="true">📚</div>
+
+            <p class="education-date">2024.9—2026.6</p>
+
+            <h3 class="education-school" data-i18n="edu2School">
+              深圳技术大学
+            </h3>
+
+            <p class="education-major" data-i18n="edu2Major">
+              英语（82/100，Top 10%）
+            </p>
+
+            <p class="education-description" data-i18n="edu2Description">
+              主修课程：品牌营销、电子商务、跨文化沟通、英语笔译、口译等。曾担任班长一职。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能与荣誉 -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="skillsKicker">
+              Skills & recognition
+            </p>
+
+            <h2 class="section-title" data-i18n="skillsTitle">
+              技能与荣誉
+            </h2>
+          </div>
+
+          <p class="section-intro" data-i18n="skillsIntro">
+            产品、数据和语言能力，以及商务谈判竞赛实践。
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="panel glass-card reveal">
+            <p class="panel-label" data-i18n="honorLabel">
+              🏆 竞赛荣誉
+            </p>
+
+            <p class="honor-date">2022.4—2023.4</p>
+
+            <h3 class="honor-title" data-i18n="honorTitle">
+              “中语智汇杯”全国商务谈判大赛
+            </h3>
+
+            <span class="honor-result" data-i18n="honorResult">
+              核心成员 & 团队冠军
+            </span>
+
+            <p class="honor-description" data-i18n="honorDescription">
+              运用 PEST、SWOT
+              完成行业与竞品分析，输出市场调研报告；测算合作区间、梳理双方核心诉求，撰写完整谈判方案，临场调整策略达成最优合作方案。
+            </p>
+          </article>
+
+          <article class="panel glass-card reveal">
+            <p class="panel-label" data-i18n="skillLabel">
+              🪄 技能与证书
+            </p>
+
+            <div class="skill-groups">
+              <div class="skill-group">
+                <div class="skill-title" data-i18n="productLabel">
+                  产品
+                </div>
+
+                <div class="skill-tags">
+                  <span class="skill-tag">PRD</span>
+                  <span class="skill-tag" data-i18n="skillCompetitor">
+                    竞品分析
+                  </span>
+                  <span class="skill-tag" data-i18n="skillUser">
+                    用户分析
+                  </span>
+                  <span class="skill-tag" data-i18n="skillPrompt">
+                    Prompt 标准化设计
+                  </span>
+                  <span class="skill-tag" data-i18n="skillEvaluation">
+                    AI 测评
+                  </span>
+                  <span class="skill-tag" data-i18n="skillBadCase">
+                    Bad Case 复盘
+                  </span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-title" data-i18n="dataLabel">
+                  数据
+                </div>
+
+                <div class="skill-tags">
+                  <span class="skill-tag">Excel</span>
+                  <span class="skill-tag">XLOOKUP</span>
+                  <span class="skill-tag">Gauge</span>
+                  <span class="skill-tag" data-i18n="skillGauge">
+                    AI 搜索可见度监测平台
+                  </span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <div class="skill-title" data-i18n="languageLabel">
+                  语言
+                </div>
+
+                <div class="skill-tags">
+                  <span class="skill-tag" data-i18n="skillTem8">
+                    英语专八
+                  </span>
+                  <span class="skill-tag" data-i18n="skillTem4">
+                    英语专四 84 分
+                  </span>
+                  <span class="skill-tag" data-i18n="skillIelts">
+                    雅思 6.5
+                  </span>
+                  <span class="skill-tag" data-i18n="skillCatti">
+                    CATTI 三笔
+                  </span>
+                  <span class="skill-tag" data-i18n="skillCet">
+                    大学英语四六级
+                  </span>
+                  <span class="skill-tag" data-i18n="skillMandarin">
+                    普通话二甲
+                  </span>
+                  <span class="skill-tag" data-i18n="skillCantonese">
+                    粤语流利
+                  </span>
+                  <span class="skill-tag" data-i18n="skillTranslation">
+                    笔译 / 基础交替传译
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="contact" id="contact">
+      <div class="container contact-content">
+        <div class="reveal">
+          <p class="contact-kicker" data-i18n="contactKicker">
+            Contact
+          </p>
+
+          <h2 class="contact-title" data-i18n="contactTitle">
+            期待与你交流。✨
+          </h2>
+
+          <p class="contact-description" data-i18n="contactDescription">
+            求职意向：AI 产品经理 / 产品运营。
+          </p>
+        </div>
+
+        <div class="contact-download reveal">
+          <div class="contact-download-text">
+            <h3 class="contact-download-title" data-i18n="downloadTitle">
+              需要一份可以存档或转发的简历？
+            </h3>
+
+            <p class="contact-download-note" data-i18n="downloadNote">
+              下载 PDF 版本，包含完整经历、项目与教育背景，可直接投递或转交
+              HR。
+            </p>
+          </div>
+
+          <div class="contact-download-action">
+            <a
+              class="button button-download button-download-light"
+              id="contactDownload"
+              href="resume/Liting-Deng-AI-PM-Resume-ZH.pdf"
+              download="AI产品经理-邓莉婷-港理工-硕士.pdf"
+            >
+              <span class="download-icon" aria-hidden="true">⤓</span>
+              <span data-i18n="downloadResume">下载 PDF 简历</span>
+              <span class="download-meta">PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-list reveal">
+          <a
+            class="contact-item"
+            href="mailto:IamDorisDeng@outlook.com"
+          >
+            <span class="contact-icon">💌</span>
+
+            <span class="contact-meta">
+              <span class="contact-label" data-i18n="emailLabel">
+                邮箱
+              </span>
+
+              <span class="contact-value">
+                IamDorisDeng@outlook.com
+              </span>
+            </span>
+          </a>
+
+          <a class="contact-item" href="tel:+8619020893150">
+            <span class="contact-icon">📱</span>
+
+            <span class="contact-meta">
+              <span class="contact-label" data-i18n="phoneLabel">
+                电话
+              </span>
+
+              <span class="contact-value">
+                (+86) 190 2089 3150
+              </span>
+            </span>
+          </a>
+        </div>
+
+        <footer class="footer">
+          <span>
+            © <span id="currentYear"></span>
+            <span data-i18n="name">邓莉婷</span>
+          </span>
+
+          <a class="back-top" href="#home">
+            <span data-i18n="backToTop">返回顶部</span>
+            <span>↑</span>
+          </a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    /* =========================
+       多语言内容
+    ========================== */
+
+    const translations = {
+      "zh-CN": {
+        pageTitle: "邓莉婷｜AI 产品经理 / 产品运营",
+        name: "邓莉婷",
+
+        navAbout: "关于我",
+        navExperience: "经历",
+        navProject: "项目",
+        navVolunteer: "志愿经历",
+        navEducation: "教育",
+        navSkills: "技能",
+        navContact: "联系",
+
+        heroEyebrow: "你好，很高兴认识你",
+        heroName: "我是邓莉婷，",
+        heroRole: "探索 AI 产品与增长。",
+        heroDescription:
+          "香港理工大学翻译与语言技术在读，聚焦 AI 产品、AI 增长与国际化产品运营。",
+        viewExperience: "看看我的经历",
+        contactMe: "联系我",
+
+        downloadResume: "下载 PDF 简历",
+        downloadTitle: "需要一份可以存档或转发的简历？",
+        downloadNote:
+          "下载 PDF 版本，包含完整经历、项目与教育背景，可直接投递或转交 HR。",
+
+        snapshot: "个人概览",
+        targetLabel: "求职意向",
+        targetValue: "AI 产品经理 / 产品运营",
+        focusLabel: "聚焦方向",
+        focusValue: "AI 产品、AI 增长、国际化产品运营",
+        availabilityLabel: "实习时间",
+        availabilityShort: "2026 年 12 月中旬起",
+
+        aboutKicker: "关于我",
+        aboutLead:
+          "从用户场景出发，把业务问题转化为产品方案、Prompt 规则、AI 评测指标与可执行流程。",
+        aboutBody:
+          "具备 GEO（生成式引擎优化）内容增长、跨境电商平台运营与 AI 产品 Demo 经验。",
+        availabilityFull:
+          "2026 年 12 月中旬起，每周 5 天，可持续 4–6 个月实习。",
+
+        experienceKicker: "Experience",
+        experienceTitle: "实习与兼职经历",
+        experienceIntro:
+          "横跨 AI 搜索增长、跨境电商、英语直播营销与品牌推广的实践经历。",
+        internship: "实习",
+        partTime: "兼职",
+
+        exp1Role: "GEO 运营",
+        exp1Company: "蓝色脉动",
+        exp1Bullet1:
+          "负责 AI 视频产品的 Reddit GEO 增长运营（基于既有 Gauge 监测体系），提升品牌在目标 AI 回答中的提及率与内容引用率。",
+        exp1Bullet2:
+          "监控 Citation Rate、Brand Mentioned 与 Traffic 等核心指标，每周更新与汇报数据，并按 URL 核验引用状态（Active / Deleted）。",
+        exp1Bullet3:
+          "累计个人发布评论约 190 条、帖子 20 篇；Citation Rate 提升约 4 个百分点。",
+
+        exp2Role: "产品运营助理（亚马逊 & Wayfair）",
+        exp2Company: "深圳市晓为供应链",
+        exp2Bullet1:
+          "负责 Amazon 与 Wayfair 两个店铺的家具商品运营，覆盖 Listing、定价、库存、广告促销等环节；累计上架 150+ 个 SKU，活动期间 2–3 天内完成约 40 个 SKU 上线。",
+        exp2Bullet2:
+          "结合库存、库龄、销量及上架状态识别滞销与异常 SKU，参与优惠券、SEO、价格及广告策略调整，并按周复盘供给与销售表现。",
+        exp2Bullet3:
+          "跟进上架异常问题并修复；负责商品均完成上线，未出现 SKU 错配或错品，保障商品及时供给。",
+
+        exp3Role: "海外带货主播",
+        exp3Company: "皇腾商务",
+        exp3Bullet1:
+          "日均 3 小时、2 场英语直播，结合美国本土场景拆解产品适配性；借助平台工具监测互动与停留数据，动态调控场策略并促成订单。",
+        exp3Bullet2:
+          "使用平台包邮、美元满减工具，并通过 A/B 测试优化优惠；建立用户反馈数字化表，同步数据至选品与库存，形成业务闭环。",
+        exp3Bullet3:
+          "单日最高 GMV 600 美元、成交 78 单；触达美国精准买家超 1000 人，累计涨粉 1200+，回头客占比 22%；咨询转化率提升 80%，美国本土订单纠纷率不高于 3%。",
+
+        exp4Role: "品牌宣传推广",
+        exp4Company: "深圳市家具行业协会",
+        exp4Bullet1:
+          "建立动态筛选机制，从超过 1000 名国际采购商中精准识别并沉淀 200+ 高意向潜在客户，为后续商务转化提供高质量线索池。",
+        exp4Bullet2:
+          "基于采购品类、预算等维度，对客户需求进行分层记录与分析，形成可追溯的客户画像数据库，提升线索跟进效率。",
+        exp4Bullet3:
+          "快速内化产品优势并形成标准化沟通话术，针对不同客户灵活调整推介策略，最大化品牌吸引力。",
+
+        projectKicker: "Selected project",
+        projectSectionTitle: "项目经历",
+        projectIntro:
+          "从需求定义、PRD、Prompt 迭代到模型调用与移动端体验的完整实践。",
+        projectTitle: "个性化 AI 词汇学习应用 Recollection",
+        projectType: "个人独立项目",
+        projectBullet1:
+          "针对“能认识单词但不会主动使用”的学习场景，分析用户痛点、竞品缺口，完成 PRD 与 MVP 优先级设计。",
+        projectBullet2:
+          "设计多维批改与结构化反馈；建立核心、边界、对抗等安全场景评测框架，并设计 Bad Case 与 Prompt 迭代机制。",
+        projectBullet3:
+          "完成模型调用、异常兜底与本地数据闭环，在数据隐私、调用成本、服务稳定性和移动端体验之间进行产品取舍。",
+        sourceCode: "源码",
+
+        volunteerKicker: "Volunteer",
+        volunteerSectionTitle: "志愿者经历",
+        volunteerIntro:
+          "在国际绳索救援赛事中承担双语沟通与现场协调工作。",
+        volunteerTitle:
+          "GRIMPDAY ASIA 格瑞德世界绳索救援大赛",
+        volunteerRole: "翻译志愿者",
+        volunteerBullet1:
+          "赛前：接机，协助比利时队员与主办方核对赛程安排，并确认装备安检流程。",
+        volunteerBullet2:
+          "赛中：精准传递比赛场地地形数据、比赛规则、安全与评分细则等关键信息，协调突发状况并解决分歧。",
+        volunteerBullet3:
+          "赛后：协助活动顺利圆满结束，并完成送机等接待工作。",
+
+        educationKicker: "Education",
+        educationTitle: "教育背景",
+        educationIntro:
+          "语言技术、NLP 语料处理、跨文化沟通与商业课程相结合的学习背景。",
+        studying: "（在读）",
+        edu1School: "香港理工大学",
+        edu1Major: "翻译与语言技术",
+        edu1Description:
+          "交叉学科方向：NLP 语料处理、人机协同翻译（MTPE）、AIGC 语言应用落地。",
+        edu2School: "深圳技术大学",
+        edu2Major: "英语（82/100，Top 10%）",
+        edu2Description:
+          "主修课程：品牌营销、电子商务、跨文化沟通、英语笔译、口译等。曾担任班长一职。",
+
+        skillsKicker: "Skills & recognition",
+        skillsTitle: "技能与荣誉",
+        skillsIntro:
+          "产品、数据和语言能力，以及商务谈判竞赛实践。",
+        honorLabel: "🏆 竞赛荣誉",
+        honorTitle: "“中语智汇杯”全国商务谈判大赛",
+        honorResult: "核心成员 & 团队冠军",
+        honorDescription:
+          "运用 PEST、SWOT 完成行业与竞品分析，输出市场调研报告；测算合作区间、梳理双方核心诉求，撰写完整谈判方案，临场调整策略达成最优合作方案。",
+
+        skillLabel: "🪄 技能与证书",
+        productLabel: "产品",
+        dataLabel: "数据",
+        languageLabel: "语言",
+        skillCompetitor: "竞品分析",
+        skillUser: "用户分析",
+        skillPrompt: "Prompt 标准化设计",
+        skillEvaluation: "AI 测评",
+        skillBadCase: "Bad Case 复盘",
+        skillGauge: "AI 搜索可见度监测平台",
+        skillTem8: "英语专八",
+        skillTem4: "英语专四 84 分",
+        skillIelts: "雅思 6.5",
+        skillCatti: "CATTI 三笔",
+        skillCet: "大学英语四六级",
+        skillMandarin: "普通话二甲",
+        skillCantonese: "粤语流利",
+        skillTranslation: "笔译 / 基础交替传译",
+
+        contactKicker: "Contact",
+        contactTitle: "期待与你交流。✨",
+        contactDescription: "求职意向：AI 产品经理 / 产品运营。",
+        emailLabel: "邮箱",
+        phoneLabel: "电话",
+        backToTop: "返回顶部",
+
+        menuOpen: "打开导航菜单",
+        menuClose: "关闭导航菜单"
+      },
+
+      "zh-TW": {
+        pageTitle: "鄧莉婷｜AI 產品經理 / 產品營運",
+        name: "鄧莉婷",
+
+        navAbout: "關於我",
+        navExperience: "經歷",
+        navProject: "專案",
+        navVolunteer: "志願經歷",
+        navEducation: "教育",
+        navSkills: "技能",
+        navContact: "聯絡",
+
+        heroEyebrow: "你好，很高興認識你",
+        heroName: "我是鄧莉婷，",
+        heroRole: "探索 AI 產品與增長。",
+        heroDescription:
+          "香港理工大學翻譯與語言技術在讀，聚焦 AI 產品、AI 增長與國際化產品營運。",
+        viewExperience: "看看我的經歷",
+        contactMe: "聯絡我",
+
+        downloadResume: "下載 PDF 履歷",
+        downloadTitle: "需要一份可以存檔或轉發的履歷？",
+        downloadNote:
+          "下載 PDF 版本，包含完整經歷、專案與教育背景，可直接投遞或轉交 HR。",
+
+        snapshot: "個人概覽",
+        targetLabel: "求職意向",
+        targetValue: "AI 產品經理 / 產品營運",
+        focusLabel: "聚焦方向",
+        focusValue: "AI 產品、AI 增長、國際化產品營運",
+        availabilityLabel: "實習時間",
+        availabilityShort: "2026 年 12 月中旬起",
+
+        aboutKicker: "關於我",
+        aboutLead:
+          "從使用者場景出發，把業務問題轉化為產品方案、Prompt 規則、AI 評測指標與可執行流程。",
+        aboutBody:
+          "具備 GEO（生成式引擎優化）內容增長、跨境電商平台營運與 AI 產品 Demo 經驗。",
+        availabilityFull:
+          "2026 年 12 月中旬起，每週 5 天，可持續 4–6 個月實習。",
+
+        experienceKicker: "Experience",
+        experienceTitle: "實習與兼職經歷",
+        experienceIntro:
+          "橫跨 AI 搜尋增長、跨境電商、英語直播行銷與品牌推廣的實踐經歷。",
+        internship: "實習",
+        partTime: "兼職",
+
+        exp1Role: "GEO 營運",
+        exp1Company: "藍色脈動",
+        exp1Bullet1:
+          "負責 AI 影片產品的 Reddit GEO 增長營運（基於既有 Gauge 監測體系），提升品牌在目標 AI 回答中的提及率與內容引用率。",
+        exp1Bullet2:
+          "監控 Citation Rate、Brand Mentioned 與 Traffic 等核心指標，每週更新與彙報數據，並按 URL 核驗引用狀態（Active / Deleted）。",
+        exp1Bullet3:
+          "累計個人發佈評論約 190 條、帖子 20 篇；Citation Rate 提升約 4 個百分點。",
+
+        exp2Role: "產品營運助理（亞馬遜 & Wayfair）",
+        exp2Company: "深圳市曉為供應鏈",
+        exp2Bullet1:
+          "負責 Amazon 與 Wayfair 兩個店鋪的家具商品營運，涵蓋 Listing、定價、庫存、廣告促銷等環節；累計上架 150+ 個 SKU，活動期間 2–3 天內完成約 40 個 SKU 上線。",
+        exp2Bullet2:
+          "結合庫存、庫齡、銷量及上架狀態識別滯銷與異常 SKU，參與優惠券、SEO、價格及廣告策略調整，並按週複盤供給與銷售表現。",
+        exp2Bullet3:
+          "跟進上架異常問題並修復；負責商品均完成上線，未出現 SKU 錯配或錯品，保障商品及時供給。",
+
+        exp3Role: "海外帶貨主播",
+        exp3Company: "皇騰商務",
+        exp3Bullet1:
+          "日均 3 小時、2 場英語直播，結合美國本土場景拆解產品適配性；借助平台工具監測互動與停留數據，動態調控場策略並促成訂單。",
+        exp3Bullet2:
+          "使用平台包郵、美元滿減工具，並透過 A/B 測試優化優惠；建立使用者回饋數位化表，同步數據至選品與庫存，形成業務閉環。",
+        exp3Bullet3:
+          "單日最高 GMV 600 美元、成交 78 單；觸達美國精準買家超過 1000 人，累計漲粉 1200+，回頭客佔比 22%；諮詢轉化率提升 80%，美國本土訂單糾紛率不高於 3%。",
+
+        exp4Role: "品牌宣傳推廣",
+        exp4Company: "深圳市家具行業協會",
+        exp4Bullet1:
+          "建立動態篩選機制，從超過 1000 名國際採購商中精準識別並沉澱 200+ 高意向潛在客戶，為後續商務轉化提供高品質線索池。",
+        exp4Bullet2:
+          "基於採購品類、預算等維度，對客戶需求進行分層記錄與分析，形成可追溯的客戶畫像資料庫，提升線索跟進效率。",
+        exp4Bullet3:
+          "快速內化產品優勢並形成標準化溝通話術，針對不同客戶靈活調整推介策略，最大化品牌吸引力。",
+
+        projectKicker: "Selected project",
+        projectSectionTitle: "專案經歷",
+        projectIntro:
+          "從需求定義、PRD、Prompt 迭代到模型調用與行動端體驗的完整實踐。",
+        projectTitle: "個人化 AI 詞彙學習應用 Recollection",
+        projectType: "個人獨立專案",
+        projectBullet1:
+          "針對「能認識單字但不會主動使用」的學習場景，分析使用者痛點、競品缺口，完成 PRD 與 MVP 優先級設計。",
+        projectBullet2:
+          "設計多維批改與結構化回饋；建立核心、邊界、對抗等安全場景評測框架，並設計 Bad Case 與 Prompt 迭代機制。",
+        projectBullet3:
+          "完成模型調用、異常兜底與本地數據閉環，在數據隱私、調用成本、服務穩定性和行動端體驗之間進行產品取捨。",
+        sourceCode: "原始碼",
+
+        volunteerKicker: "Volunteer",
+        volunteerSectionTitle: "志願者經歷",
+        volunteerIntro:
+          "在國際繩索救援賽事中承擔雙語溝通與現場協調工作。",
+        volunteerTitle:
+          "GRIMPDAY ASIA 格瑞德世界繩索救援大賽",
+        volunteerRole: "翻譯志願者",
+        volunteerBullet1:
+          "賽前：接機，協助比利時隊員與主辦方核對賽程安排，並確認裝備安檢流程。",
+        volunteerBullet2:
+          "賽中：精準傳遞比賽場地地形數據、比賽規則、安全與評分細則等關鍵資訊，協調突發狀況並解決分歧。",
+        volunteerBullet3:
+          "賽後：協助活動順利圓滿結束，並完成送機等接待工作。",
+
+        educationKicker: "Education",
+        educationTitle: "教育背景",
+        educationIntro:
+          "語言技術、NLP 語料處理、跨文化溝通與商業課程相結合的學習背景。",
+        studying: "（在讀）",
+        edu1School: "香港理工大學",
+        edu1Major: "翻譯與語言技術",
+        edu1Description:
+          "跨學科方向：NLP 語料處理、人機協同翻譯（MTPE）、AIGC 語言應用落地。",
+        edu2School: "深圳技術大學",
+        edu2Major: "英語（82/100，Top 10%）",
+        edu2Description:
+          "主修課程：品牌行銷、電子商務、跨文化溝通、英語筆譯、口譯等。曾擔任班長一職。",
+
+        skillsKicker: "Skills & recognition",
+        skillsTitle: "技能與榮譽",
+        skillsIntro:
+          "產品、數據和語言能力，以及商務談判競賽實踐。",
+        honorLabel: "🏆 競賽榮譽",
+        honorTitle: "「中語智匯杯」全國商務談判大賽",
+        honorResult: "核心成員 & 團隊冠軍",
+        honorDescription:
+          "運用 PEST、SWOT 完成行業與競品分析，輸出市場調研報告；測算合作區間、梳理雙方核心訴求，撰寫完整談判方案，臨場調整策略達成最優合作方案。",
+
+        skillLabel: "🪄 技能與證書",
+        productLabel: "產品",
+        dataLabel: "數據",
+        languageLabel: "語言",
+        skillCompetitor: "競品分析",
+        skillUser: "使用者分析",
+        skillPrompt: "Prompt 標準化設計",
+        skillEvaluation: "AI 評測",
+        skillBadCase: "Bad Case 複盤",
+        skillGauge: "AI 搜尋可見度監測平台",
+        skillTem8: "英語專八",
+        skillTem4: "英語專四 84 分",
+        skillIelts: "雅思 6.5",
+        skillCatti: "CATTI 三筆",
+        skillCet: "大學英語四六級",
+        skillMandarin: "普通話二甲",
+        skillCantonese: "粵語流利",
+        skillTranslation: "筆譯 / 基礎交替傳譯",
+
+        contactKicker: "Contact",
+        contactTitle: "期待與你交流。✨",
+        contactDescription: "求職意向：AI 產品經理 / 產品營運。",
+        emailLabel: "電子郵件",
+        phoneLabel: "電話",
+        backToTop: "返回頂部",
+
+        menuOpen: "開啟導覽選單",
+        menuClose: "關閉導覽選單"
+      },
+
+      "en-US": {
+        pageTitle:
+          "DENG Liting | AI Product Manager / Product Operations",
+        name: "DENG Liting",
+
+        navAbout: "About",
+        navExperience: "Experience",
+        navProject: "Project",
+        navVolunteer: "Volunteer",
+        navEducation: "Education",
+        navSkills: "Skills",
+        navContact: "Contact",
+
+        heroEyebrow: "Hello, it’s nice to meet you",
+        heroName: "I’m DENG Liting,",
+        heroRole: "exploring AI products and growth.",
+        heroDescription:
+          "M.A. candidate in Translation and Language Technology at The Hong Kong Polytechnic University, focusing on AI product design, GEO growth, and cross-border e-commerce operations.",
+        viewExperience: "Explore my experience",
+        contactMe: "Contact me",
+
+        downloadResume: "Download PDF CV",
+        downloadTitle: "Need a CV you can save or forward?",
+        downloadNote:
+          "Download the PDF version with the full experience, project, and education details — ready to submit or pass on to HR.",
+
+        snapshot: "Profile",
+        targetLabel: "Target roles",
+        targetValue: "AI Product Manager / Product Operations",
+        focusLabel: "Focus",
+        focusValue:
+          "AI Product Design, GEO Growth, Cross-border E-commerce Operations",
+        availabilityLabel: "Availability",
+        availabilityShort: "From mid-December 2026",
+
+        aboutKicker: "About me",
+        aboutLead:
+          "Translating user needs into product requirements, prompt rules, evaluation metrics, and executable workflows.",
+        aboutBody:
+          "Hands-on experience in AI product design, generative engine optimization (GEO) growth, and cross-border e-commerce operations.",
+        availabilityFull:
+          "Available from mid-December 2026, 5 days a week, for 4–6 months.",
+
+        experienceKicker: "Experience",
+        experienceTitle: "Work Experience",
+        experienceIntro:
+          "Hands-on experience spanning AI product growth, cross-border e-commerce operations, English livestream selling, and brand promotion.",
+        internship: "Internship",
+        partTime: "Part-time",
+
+        exp1Role: "GEO Operations Intern | AI Video Product",
+        exp1Company: "Blue Pulse",
+        exp1Bullet1:
+          "Executed Reddit-based generative engine optimization (GEO) initiatives on top of an existing Gauge monitoring setup, increasing brand mentions and content citations in AI-generated answers.",
+        exp1Bullet2:
+          "Tracked Citation Rate, Brand Mentions, Traffic, and URL-level citation status (Active/Deleted); updated dashboards and presented weekly performance reviews.",
+        exp1Bullet3:
+          "Published approximately 190 comments and 20 posts independently; lifted Citation Rate by 4 percentage points.",
+
+        exp2Role:
+          "Product Operations Assistant | Amazon & Wayfair",
+        exp2Company: "Shenzhen Xiaowei Supply Chain Co., Ltd.",
+        exp2Bullet1:
+          "Operated furniture listings across two Amazon and Wayfair stores, covering listing creation, pricing, inventory, advertising, and promotions; launched 150+ SKUs, including approximately 40 within 2–3 days for a seasonal campaign.",
+        exp2Bullet2:
+          "Monitored inventory, inventory age, sales, and listing status to identify slow-moving or abnormal SKUs; supported coupon, SEO, pricing, and advertising adjustments through weekly reviews.",
+        exp2Bullet3:
+          "Resolved listing issues involving copyrighted terms and image specifications, ensuring all assigned products went live without SKU or product mismatches.",
+
+        exp3Role: "International Livestream Sales Host",
+        exp3Company: "Huangteng Trading Co., Ltd.",
+        exp3Bullet1:
+          "Hosted two English-language livestream sessions totaling three hours per day, explaining product suitability through U.S.-based use scenarios; monitored engagement and watch-time data through platform tools and adjusted livestream tactics to drive orders.",
+        exp3Bullet2:
+          "Applied free-shipping and USD discount tools and optimized promotions through A/B testing; built a digital user-feedback table and fed insights back into product selection and inventory to close the loop.",
+        exp3Bullet3:
+          "Achieved a peak daily GMV of USD 600 across 78 orders; reached more than 1,000 targeted U.S. buyers, gained over 1,200 followers, and sustained a 22% returning-customer rate. Increased inquiry conversion by 80% while keeping the U.S. domestic order-dispute rate at or below 3%.",
+
+        exp4Role: "Brand Promotion",
+        exp4Company: "Shenzhen Furniture Industry Association",
+        exp4Bullet1:
+          "Built a dynamic screening mechanism and identified more than 200 high-intent prospects from over 1,000 international buyers, creating a high-quality lead pool for business conversion.",
+        exp4Bullet2:
+          "Recorded and analyzed buyer requirements by product category, budget, and other dimensions, creating a traceable buyer-profile database that improved lead follow-up efficiency.",
+        exp4Bullet3:
+          "Rapidly internalized product advantages into standardized communication scripts and adapted pitch strategies for different buyers to maximize brand appeal.",
+
+        projectKicker: "Selected project",
+        projectSectionTitle: "Project",
+        projectIntro:
+          "An end-to-end practice spanning requirement definition, PRD, prompt iteration, model integration, and mobile experience.",
+        projectTitle:
+          "Recollection — Personalized AI Vocabulary Learning App",
+        projectType: "Independent Product Project",
+        projectBullet1:
+          "Identified the gap between passive word recognition and active usage, analyzed user pain points and competing solutions, and defined the PRD and MVP priorities.",
+        projectBullet2:
+          "Designed multi-dimensional AI grading and structured feedback; defined core, boundary, and adversarial test scenarios alongside a bad-case review and prompt iteration mechanism.",
+        projectBullet3:
+          "Delivered a working PWA with model integration, failure handling, and local data storage, balancing privacy, API cost, service reliability, and mobile usability.",
+        sourceCode: "Source code",
+
+        volunteerKicker: "Volunteer",
+        volunteerSectionTitle: "Volunteer Experience",
+        volunteerIntro:
+          "Provided bilingual communication and on-site coordination support during an international rope-rescue competition.",
+        volunteerTitle:
+          "GRIMPDAY ASIA International Rope Rescue Competition",
+        volunteerRole: "Volunteer Interpreter",
+        volunteerBullet1:
+          "Before the competition: welcomed the Belgian team at the airport, helped team members and the organizer confirm the schedule, and verified the equipment security-check process.",
+        volunteerBullet2:
+          "During the competition: accurately communicated key information including terrain data, competition rules, safety requirements, and scoring criteria; coordinated unexpected situations and helped resolve disagreements.",
+        volunteerBullet3:
+          "After the competition: supported the successful completion of the event and assisted with airport departure arrangements.",
+
+        educationKicker: "Education",
+        educationTitle: "Education",
+        educationIntro:
+          "An academic background combining language technology, NLP corpus processing, cross-cultural communication, and business coursework.",
+        studying: " (Expected)",
+        edu1School: "The Hong Kong Polytechnic University (PolyU)",
+        edu1Major: "M.A. in Translation and Language Technology",
+        edu1Description:
+          "Interdisciplinary focus: NLP corpus processing, machine translation post-editing (MTPE), and AIGC-enabled language applications.",
+        edu2School: "Shenzhen Technology University",
+        edu2Major: "B.A. in English | Average: 82/100 | Top 10%",
+        edu2Description:
+          "Relevant coursework: Brand Marketing, E-commerce, Cross-cultural Communication, Translation, and Interpreting. Class Monitor.",
+
+        skillsKicker: "Skills & recognition",
+        skillsTitle: "Skills & Certifications",
+        skillsIntro:
+          "Product, data and tools, and language capabilities, alongside national business negotiation competition experience.",
+        honorLabel: "🏆 Competition",
+        honorTitle:
+          "Zhongyu Zhihui Cup National Business Negotiation Competition",
+        honorResult: "Core Team Member & National Team Champion",
+        honorDescription:
+          "Applied PEST and SWOT analyses to assess the industry and competitors, developed a market research report and negotiation plan, modeled acceptable deal ranges, and adapted the strategy during live negotiations to reach the optimal agreement.",
+
+        skillLabel: "🪄 Skills & certifications",
+        productLabel: "Product",
+        dataLabel: "Data & Tools",
+        languageLabel: "Languages & Certifications",
+        skillCompetitor: "Competitive Analysis",
+        skillUser: "User Analysis",
+        skillPrompt: "Prompt Design",
+        skillEvaluation: "AI Evaluation",
+        skillBadCase: "Bad-Case Review",
+        skillGauge: "AI Search Visibility Platform",
+        skillTem8: "TEM-8",
+        skillTem4: "TEM-4: 84",
+        skillIelts: "IELTS: 6.5",
+        skillCet: "CET-4/6",
+        skillCatti: "CATTI Level 3 Translation",
+        skillMandarin: "PSC Level 2-A (Mandarin)",
+        skillCantonese: "Cantonese (Fluent)",
+        skillTranslation:
+          "Translation & Basic Consecutive Interpreting",
+
+        contactKicker: "Contact",
+        contactTitle: "Let’s connect. ✨",
+        contactDescription:
+          "Target roles: AI Product Manager / Product Operations.",
+        emailLabel: "Email",
+        phoneLabel: "Phone",
+        backToTop: "Back to top",
+
+        menuOpen: "Open navigation menu",
+        menuClose: "Close navigation menu"
+      }
+    };
+
+    /* =========================
+       简历文件（按语言切换）
+    ========================== */
+
+    const resumeFiles = {
+      "zh-CN": {
+        href: "resume/Liting-Deng-AI-PM-Resume-ZH.pdf",
+        name: "AI产品经理-邓莉婷-港理工-硕士.pdf"
+      },
+      "zh-TW": {
+        href: "resume/Liting-Deng-AI-PM-Resume-ZH.pdf",
+        name: "AI产品经理-邓莉婷-港理工-硕士.pdf"
+      },
+      "en-US": {
+        href: "resume/Liting-Deng-AI-PM-Resume-EN.pdf",
+        name: "DENG_Liting_AI_Product_Manager_CV.pdf"
+      }
+    };
+
+    const downloadLinks =
+      document.querySelectorAll(".button-download");
+
+    function applyResumeFile(language) {
+      const file =
+        resumeFiles[language] || resumeFiles["zh-CN"];
+
+      downloadLinks.forEach((link) => {
+        link.setAttribute("href", file.href);
+        link.setAttribute("download", file.name);
+      });
+    }
+
+    /* =========================
+       语言切换
+    ========================== */
+
+    const languageSelect =
+      document.getElementById("languageSelect");
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navArea =
+      document.getElementById("navArea");
+
+    const siteHeader =
+      document.getElementById("siteHeader");
+
+    function applyLanguage(language) {
+      const current =
+        translations[language] || translations["zh-CN"];
+
+      document.documentElement.lang = language;
+      document.title = current.pageTitle;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.dataset.i18n;
+
+        if (current[key] !== undefined) {
+          element.textContent = current[key];
+        }
+      });
+
+      applyResumeFile(language);
+
+      languageSelect.value = language;
+
+      const menuIsOpen =
+        navArea.classList.contains("is-open");
+
+      menuButton.setAttribute(
+        "aria-label",
+        menuIsOpen ? current.menuClose : current.menuOpen
+      );
+
+      localStorage.setItem("resume-language", language);
+    }
+
+    languageSelect.addEventListener("change", (event) => {
+      applyLanguage(event.target.value);
+      closeMenu();
+    });
+
+    /* =========================
+       移动端菜单
+    ========================== */
+
+    function openMenu() {
+      navArea.classList.add("is-open");
+      menuButton.classList.add("is-active");
+      menuButton.setAttribute("aria-expanded", "true");
+      document.body.classList.add("menu-open");
+
+      const current =
+        translations[document.documentElement.lang] ||
+        translations["zh-CN"];
+
+      menuButton.setAttribute(
+        "aria-label",
+        current.menuClose
+      );
+    }
+
+    function closeMenu() {
+      navArea.classList.remove("is-open");
+      menuButton.classList.remove("is-active");
+      menuButton.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
+
+      const current =
+        translations[document.documentElement.lang] ||
+        translations["zh-CN"];
+
+      menuButton.setAttribute(
+        "aria-label",
+        current.menuOpen
+      );
+    }
+
+    menuButton.addEventListener("click", () => {
+      if (navArea.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1060) {
+        closeMenu();
+      }
+    });
+
+    /* =========================
+       导航滚动效果
+    ========================== */
+
+    function updateHeader() {
+      siteHeader.classList.toggle(
+        "is-scrolled",
+        window.scrollY > 16
+      );
+    }
+
+    updateHeader();
+
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      { passive: true }
+    );
+
+    /* =========================
+       入场动画
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1
+        }
+      );
+
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("is-visible");
+      });
+    }
+
+    /* =========================
+       当前导航栏目高亮
+    ========================== */
+
+    const sections =
+      document.querySelectorAll("main section[id]");
+
+    const navigationLinks =
+      document.querySelectorAll(".nav-link");
+
+    if ("IntersectionObserver" in window) {
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            const currentId = entry.target.id;
+
+            navigationLinks.forEach((link) => {
+              const active =
+                link.getAttribute("href") ===
+                `#${currentId}`;
+
+              link.classList.toggle("active", active);
+            });
+          });
+        },
+        {
+          rootMargin: "-30% 0px -60% 0px",
+          threshold: 0
+        }
+      );
+
+      sections.forEach((section) => {
+        sectionObserver.observe(section);
+      });
+    }
+
+    /* =========================
+       初始化
+    ========================== */
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    const savedLanguage =
+      localStorage.getItem("resume-language") || "zh-CN";
+
+    applyLanguage(savedLanguage);
+  </script>
+</body>
+</html>
